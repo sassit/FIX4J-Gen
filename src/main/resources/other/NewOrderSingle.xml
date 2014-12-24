@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--/******************************************************************************* 
+	* Copyright (c) quickfixengine.org All rights reserved. * * This file is 
+	part of the QuickFIX FIX Engine * * This file may be distributed under the 
+	terms of the quickfixengine.org * license as defined by quickfixengine.org 
+	and appearing in the file * LICENSE included in the packaging of this file. 
+	* * This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING * 
+	THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A * PARTICULAR PURPOSE. 
+	* * See http://www.quickfixengine.org/LICENSE for licensing information. 
+	* * Contact ask@quickfixengine.org if any conditions of this licensing * 
+	are not clear to you. ******************************************************************************/ -->
+<fix:message xmlns:fix="http://www.algotrader.org/fix"
+	version="4.2">
+	<fix:header>
+		<fix:BeginString type="STRING" required="Y" />
+		<fix:BodyLength type="INT" required="Y" />
+		<fix:MsgType type="STRING" required="Y" />
+		<fix:SenderCompID type="STRING" required="Y" />
+		<fix:TargetCompID type="STRING" required="Y" />
+		<fix:OnBehalfOfCompID type="STRING" required="N" />
+		<fix:DeliverToCompID type="STRING" required="N" />
+		<fix:SecureDataLen type="INT" required="N" />
+		<fix:SecureData type="DATA" required="N" />
+		<fix:MsgSeqNum type="INT" required="Y" />
+		<fix:SenderSubID type="STRING" required="N" />
+		<fix:SenderLocationID type="STRING" required="N" />
+		<fix:TargetSubID type="STRING" required="N" />
+		<fix:TargetLocationID type="STRING" required="N" />
+		<fix:OnBehalfOfSubID type="STRING" required="N" />
+		<fix:OnBehalfOfLocationID type="STRING"
+			required="N" />
+		<fix:DeliverToSubID type="STRING" required="N" />
+		<fix:DeliverToLocationID type="STRING"
+			required="N" />
+		<fix:PossDupFlag type="BOOLEAN" required="N" />
+		<fix:PossResend type="BOOLEAN" required="N" />
+		<fix:SendingTime type="UTCTIMESTAMP" required="Y" />
+		<fix:OrigSendingTime type="UTCTIMESTAMP" required="N" />
+		<fix:XmlDataLen type="INT" required="N" />
+		<fix:XmlData type="DATA" required="N" />
+		<fix:MessageEncoding type="STRING" required="N" />
+		<fix:LastMsgSeqNumProcessed type="INT"
+			required="N" />
+		<fix:OnBehalfOfSendingTime type="UTCTIMESTAMP"
+			required="N" />
+	</fix:header>
+	<fix:NewOrderSingle>
+		<fix:ClOrdID type="STRING" required="Y" />
+		<fix:ClientID type="STRING" required="N" />
+		<fix:ExecBroker type="STRING" required="N" />
+		<fix:Account type="STRING" required="N" />
+		<fix:NoAllocs type="group" required="N">
+			<fix:AllocAccount type="STRING" required="N" />
+			<fix:AllocShares type="QTY" required="N" />
+		</fix:NoAllocs>
+		<fix:SettlmntTyp type="CHAR" required="N" />
+		<fix:FutSettDate type="LOCALMKTDATE" required="N" />
+		<fix:HandlInst type="CHAR" required="Y" />
+		<fix:ExecInst type="MULTIPLEVALUESTRING" required="N" />
+		<fix:MinQty type="QTY" required="N" />
+		<fix:MaxFloor type="QTY" required="N" />
+		<fix:ExDestination type="EXCHANGE" required="N" />
+		<fix:NoTradingSessions type="group" required="N">
+			<fix:TradingSessionID type="STRING" required="N" />
+		</fix:NoTradingSessions>
+		<fix:ProcessCode type="CHAR" required="N" />
+		<fix:Symbol type="STRING" required="Y" />
+		<fix:SymbolSfx type="STRING" required="N" />
+		<fix:SecurityID type="STRING" required="N" />
+		<fix:IDSource type="STRING" required="N" />
+		<fix:SecurityType type="STRING" required="N" />
+		<fix:MaturityMonthYear type="MONTHYEAR"
+			required="N" />
+		<fix:MaturityDay type="DAYOFMONTH" required="N" />
+		<fix:PutOrCall type="INT" required="N" />
+		<fix:StrikePrice type="PRICE" required="N" />
+		<fix:OptAttribute type="CHAR" required="N" />
+		<fix:ContractMultiplier type="FLOAT" required="N" />
+		<fix:CouponRate type="FLOAT" required="N" />
+		<fix:SecurityExchange type="EXCHANGE" required="N" />
+		<fix:Issuer type="STRING" required="N" />
+		<fix:EncodedIssuerLen type="INT" required="N" />
+		<fix:EncodedIssuer type="DATA" required="N" />
+		<fix:SecurityDesc type="STRING" required="N" />
+		<fix:EncodedSecurityDescLen type="INT"
+			required="N" />
+		<fix:EncodedSecurityDesc type="DATA" required="N" />
+		<fix:PrevClosePx type="PRICE" required="N" />
+		<fix:Side type="CHAR" required="Y" />
+		<fix:LocateReqd type="BOOLEAN" required="N" />
+		<fix:TransactTime type="UTCTIMESTAMP" required="Y" />
+		<fix:OrderQty type="QTY" required="N" />
+		<fix:CashOrderQty type="QTY" required="N" />
+		<fix:OrdType type="CHAR" required="Y" />
+		<fix:Price type="PRICE" required="N" />
+		<fix:StopPx type="PRICE" required="N" />
+		<fix:Currency type="CURRENCY" required="N" />
+		<fix:ComplianceID type="STRING" required="N" />
+		<fix:SolicitedFlag type="BOOLEAN" required="N" />
+		<fix:IOIid type="STRING" required="N" />
+		<fix:QuoteID type="STRING" required="N" />
+		<fix:TimeInForce type="CHAR" required="N" />
+		<fix:EffectiveTime type="UTCTIMESTAMP" required="N" />
+		<fix:ExpireDate type="LOCALMKTDATE" required="N" />
+		<fix:ExpireTime type="UTCTIMESTAMP" required="N" />
+		<fix:GTBookingInst type="INT" required="N" />
+		<fix:Commission type="AMT" required="N" />
+		<fix:CommType type="CHAR" required="N" />
+		<fix:Rule80A type="CHAR" required="N" />
+		<fix:ForexReq type="BOOLEAN" required="N" />
+		<fix:SettlCurrency type="CURRENCY" required="N" />
+		<fix:Text type="STRING" required="N" />
+		<fix:EncodedTextLen type="INT" required="N" />
+		<fix:EncodedText type="DATA" required="N" />
+		<fix:FutSettDate2 type="LOCALMKTDATE" required="N" />
+		<fix:OrderQty2 type="QTY" required="N" />
+		<fix:OpenClose type="CHAR" required="N" />
+		<fix:CoveredOrUncovered type="INT" required="N" />
+		<fix:CustomerOrFirm type="INT" required="N" />
+		<fix:MaxShow type="QTY" required="N" />
+		<fix:PegDifference type="PRICEOFFSET" required="N" />
+		<fix:DiscretionInst type="CHAR" required="N" />
+		<fix:DiscretionOffset type="PRICEOFFSET"
+			required="N" />
+		<fix:ClearingFirm type="STRING" required="N" />
+		<fix:ClearingAccount type="STRING" required="N" />
+	</fix:NewOrderSingle>
+	<fix:trailer>
+		<fix:SignatureLength type="INT" required="N" />
+		<fix:Signature type="DATA" required="N" />
+		<fix:CheckSum type="STRING" required="Y" />
+	</fix:trailer>
+</fix:message>

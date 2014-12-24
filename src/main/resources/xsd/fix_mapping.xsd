@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" xmlns:fix="http://www.algotrader.org/fix">
+	<xs:import namespace="http://www.algotrader.org/fix"
+		schemaLocation="fix.xsd" />
+	<xs:element name="scope">
+		<xs:complexType>
+			<xs:attribute name="instanceof" use="required" />
+			<xs:attribute name="ref" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="header">
+		<xs:complexType />
+	</xs:element>
+	<xs:element name="trailer">
+		<xs:complexType />
+	</xs:element>
+	<xs:complexType name="mapping">
+		<xs:sequence>
+			<xs:element ref="mapping" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="mapping">
+		<xs:complexType>
+			<xs:attribute name="ref" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

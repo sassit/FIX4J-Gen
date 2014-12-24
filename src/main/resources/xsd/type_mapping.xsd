@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="type_map">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fix" />
+        <xs:element ref="java"/>
+        <xs:element ref="converter" minOccurs="0"/>
+        <xs:element ref="format" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fix" type="xs:NCName"/>
+  <xs:element name="java" type="xs:NCName"/>
+  <xs:element name="converter">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="format">
+    <xs:complexType/>
+  </xs:element>
+</xs:schema>
